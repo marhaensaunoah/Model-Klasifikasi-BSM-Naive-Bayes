@@ -22,6 +22,16 @@ def load_custom_css():
     color: #F8FAFC !important;
 }
 
+/* Paksa title sidebar/brand tidak pakai font aneh */
+.sidebar-title,
+.app-title,
+.brand-title,
+.logo-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+    letter-spacing: 0.02em !important;
+}
 
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=IBM+Plex+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
     
