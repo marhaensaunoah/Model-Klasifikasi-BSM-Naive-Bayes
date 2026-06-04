@@ -12,6 +12,183 @@ def load_custom_css():
     """Memuat custom CSS untuk aplikasi Streamlit."""
     st.markdown("""
     <style>
+    html, body,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"],
+.main,
+.block-container {
+    background: #05070D !important;
+    color: #F8FAFC !important;
+}
+
+/* Header Streamlit bagian atas */
+[data-testid="stHeader"] {
+    background: rgba(5, 7, 13, 0.92) !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] > div:first-child {
+    background: #080B14 !important;
+    border-right: 1px solid #1F2937 !important;
+}
+
+/* Semua teks dasar */
+h1, h2, h3, h4, h5, h6,
+p, span, div, label {
+    color: inherit;
+}
+
+/* Judul besar dan section title */
+h1, h2, h3 {
+    color: #F8FAFC !important;
+}
+
+/* Teks kecil / caption */
+small,
+[data-testid="stCaptionContainer"] {
+    color: #CBD5E1 !important;
+}
+
+/* Card / container umum */
+.modern-card,
+.prediction-card,
+[data-testid="stMetric"],
+[data-testid="stExpander"] {
+    background: #0F172A !important;
+    color: #F8FAFC !important;
+    border: 1px solid #243244 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35) !important;
+}
+
+/* Card text */
+.metric-label,
+.metric-desc {
+    color: #CBD5E1 !important;
+}
+
+.metric-value {
+    color: #60A5FA !important;
+}
+
+/* Input */
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox > div > div,
+textarea {
+    background: #111827 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #334155 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+/* Placeholder input */
+.stTextInput input::placeholder,
+.stNumberInput input::placeholder,
+textarea::placeholder {
+    color: #94A3B8 !important;
+}
+
+/* Label form */
+.stTextInput label,
+.stNumberInput label,
+.stSelectbox label,
+.stSlider label,
+.stFileUploader label {
+    color: #E5E7EB !important;
+}
+
+/* Selectbox dropdown text */
+.stSelectbox span {
+    color: #F8FAFC !important;
+}
+
+/* Button */
+.stButton > button {
+    background: #2563EB !important;
+    color: #FFFFFF !important;
+    border: 1px solid #3B82F6 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+.stButton > button:hover {
+    background: #1D4ED8 !important;
+    color: #FFFFFF !important;
+    border-color: #60A5FA !important;
+}
+
+/* Download button */
+.stDownloadButton > button {
+    background: #FACC15 !important;
+    color: #111827 !important;
+    border: 1px solid #FDE047 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+.stDownloadButton > button:hover {
+    background: #EAB308 !important;
+    color: #111827 !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    background: #0F172A !important;
+    border: 1px solid #243244 !important;
+    border-radius: 12px !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: #CBD5E1 !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #2563EB !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+}
+
+/* Dataframe / tabel */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    background: #0F172A !important;
+    color: #F8FAFC !important;
+}
+
+/* File uploader */
+.stFileUploader > div {
+    background: #0F172A !important;
+    border: 1px dashed #475569 !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+/* Alert bawaan Streamlit */
+[data-testid="stAlert"] {
+    background: #111827 !important;
+    color: #F8FAFC !important;
+    border: 1px solid #334155 !important;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background: #0F172A !important;
+    color: #F8FAFC !important;
+}
+
+/* Garis horizontal */
+hr {
+    border-color: #243244 !important;
+}
+
+/* Plotly chart container */
+[data-testid="stPlotlyChart"] {
+    background: #0F172A !important;
+    border-radius: 14px !important;
+    padding: 10px !important;
+}
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=IBM+Plex+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
     
     /* ===== GLOBAL VARIABLES ===== */
