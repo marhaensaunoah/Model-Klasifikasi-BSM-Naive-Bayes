@@ -12,6 +12,17 @@ def load_custom_css():
     """Memuat custom CSS untuk aplikasi Streamlit."""
     st.markdown("""
     <style>
+    html, body,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"],
+.main,
+.block-container {
+    background: #05070D !important;
+    color: #F8FAFC !important;
+}
+
+
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=IBM+Plex+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
     
     /* ===== GLOBAL VARIABLES ===== */
