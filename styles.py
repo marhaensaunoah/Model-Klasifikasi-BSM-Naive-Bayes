@@ -12,25 +12,52 @@ def load_custom_css():
     """Memuat custom CSS untuk aplikasi Streamlit."""
     st.markdown("""
     <style>
-    html, body,
+
+    /* ===== DARK BACKGROUND FIX - AMAN, TIDAK UBAH FONT ===== */
+html,
+body,
 [data-testid="stAppViewContainer"],
 [data-testid="stMain"],
 [data-testid="stMainBlockContainer"],
 .main,
 .block-container {
     background: #05070D !important;
+}
+
+/* Header atas Streamlit */
+[data-testid="stHeader"] {
+    background: rgba(5, 7, 13, 0.92) !important;
+}
+
+/* Pastikan area konten tetap gelap */
+.main .block-container {
+    background: transparent !important;
+}
+
+/* Teks umum di area utama, tanpa ubah font */
+.main,
+.main p,
+.main span,
+.main div,
+.main label {
+    color: #F8FAFC;
+}
+
+/* Heading utama tetap pakai font bawaan CSS lu */
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6 {
     color: #F8FAFC !important;
 }
 
-/* Paksa title sidebar/brand tidak pakai font aneh */
-.sidebar-title,
-.app-title,
-.brand-title,
-.logo-title {
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-weight: 700 !important;
-    text-shadow: none !important;
-    letter-spacing: 0.02em !important;
+/* Teks kecil / deskripsi */
+.main small,
+.main .caption,
+[data-testid="stCaptionContainer"] {
+    color: #CBD5E1 !important;
 }
 
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=IBM+Plex+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
